@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ddt.manage.mapper.PhoneManageMapper">
+
+	<resultMap type="java.util.HashMap" id="getAllPhone">
+		<result property="id" column="id" />
+		<result property="phoneType" column="phone_type" />
+	</resultMap>
+
+	<!-- 得到手机信息 -->
+	<select id="getPhone" resultMap="getAllPhone" parameterType="java.util.HashMap">
+		select id,phone_type from phone
+		<where>
+			<if test="id != null">id = #{id}</if>
+			<if test="phone_type != null">phone_type = #{phoneType}</if>
+		</where>
+	</select>
+	
+	<!-- 增加手机信息 -->
+	<insert id="insertPhone" parameterType="java.util.HashMap">
+		insert into phone(phone_type) values(#{phone_type})
+	</insert>
+
+</mapper>

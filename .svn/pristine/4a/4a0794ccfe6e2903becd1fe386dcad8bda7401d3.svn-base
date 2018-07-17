@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ddt.manage.mapper.GoodsManageMapper">
+	<!-- <resultMap type="java.util.HashMap" id="getAllGoodsResult">
+		<result property="Id" column="id" />
+		<result property="Title" column="title" />
+		<result property="Posttime" column="posttime" />
+	</resultMap> -->
+	<resultMap type="com.ddt.manage.po.GoodsItems" id="getAllGoodsResult">
+		<result property="id" column="id" />
+		<result property="title" column="title" />
+		<result property="posttime" column="posttime" />
+	</resultMap>
+	
+	<!-- 得到商品信息 --> 
+	<select id="getAllGoods" resultMap="getAllGoodsResult" parameterType="java.util.HashMap">
+	  	select id,title,posttime	from dhk_goods
+	  	<if test="id != null">where id = #{id}</if>
+    </select>
+    
+</mapper>

@@ -1,0 +1,76 @@
+log4j.rootLogger=DEBUG,CONSOLE,A,FILE
+log4j.addivity.org.apache=false
+
+log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
+log4j.appender.CONSOLE.Threshold=DEBUG
+log4j.appender.CONSOLE.Target=System.out
+log4j.appender.CONSOLE.Encoding=UTF-8
+log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout
+#log4j.appender.CONSOLE.layout.ConversionPattern=%d{yyyy-MM-dd HH\:mm\:ss} %-4r [%t] %-5p  %x - %m%n
+log4j.appender.CONSOLE.layout.ConversionPattern=%-4r %-5p %d{yyyy-MM-dd HH:mm:ss S} %c - %m%n
+
+# 应用于文件
+#log4j.appender.FILE=org.apache.log4j.FileAppender 
+#log4j.appender.FILE.Threshold=ERROR
+#log4j.appender.FILE.File=${catalina.home}/logs/error/file.log 
+#log4j.appender.FILE.Append=true 
+#log4j.appender.FILE.layout=org.apache.log4j.PatternLayout 
+#log4j.appender.FILE.layout.ConversionPattern=[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n 
+ 
+#log4j.appender.A=org.apache.log4j.DailyRollingFileAppender  
+#log4j.appender.A.Threshold=ERROR
+#log4j.appender.A.File=${catalina.home}/logs/error/ddt_managelog_
+#log4j.appender.A.DatePattern=yyyy-MM-dd'.log'
+#log4j.appender.A.layout=org.apache.log4j.PatternLayout  
+#log4j.appender.A.layout.ConversionPattern=[ddtManage_sys]  %d{yyyy-MM-dd HH\:mm\:ss} %5p %c{1}\:%L \: %m%n
+
+###########################配置方式2#######################################
+#log4j.rootLogger=INFO,all,root,debug,info,warn,error,fatal
+#log4j.appender.all=org.apache.log4j.ConsoleAppender
+#log4j.appender.all.layout=org.apache.log4j.PatternLayout
+#log4j.appender.all.layout.ConversionPattern=%d{yyyy-MM-dd HH\:mm} [%p]  [%t] - (%F\:%L) [\u65e5\u5fd7\u5185\u5bb9\uff1a%m]      Time\=%r %n
+#
+#log4j.appender.root=org.apache.log4j.DailyRollingFileAppender 
+#log4j.appender.root.File=/logs/root/BDXY_
+#log4j.appender.root.DatePattern=yyyy-MM-dd-HH'.log'
+#log4j.appender.root.layout=org.apache.log4j.PatternLayout
+#log4j.appender.root.layout.ConversionPattern=>>LOG4J<< %r %d %p [%c] - %m%n
+#
+#
+#log4j.appender.debug=org.apache.log4j.DailyRollingFileAppender 
+#log4j.appender.debug.File=/logs/debug/BDXY_
+#log4j.appender.debug.DatePattern=yyyy-MM-dd-HH'.log'
+#log4j.appender.debug.layout=org.apache.log4j.PatternLayout
+#log4j.appender.debug.layout.ConversionPattern=>>LOG4J<< %r %d %p [%c] - %m%n
+#log4j.appender.debug.Threshold = DEBUG 
+#
+#
+#
+#log4j.appender.info=org.apache.log4j.DailyRollingFileAppender 
+#log4j.appender.info.File=/logs/info/BDXY_
+#log4j.appender.info.DatePattern=yyyy-MM-dd-HH'.log'
+#log4j.appender.info.layout=org.apache.log4j.PatternLayout
+#log4j.appender.info.layout.ConversionPattern=>>LOG4J<< %r %d %p [%c] - %m%n
+#log4j.appender.info.Threshold = INFO 
+#
+#log4j.appender.warn=org.apache.log4j.DailyRollingFileAppender 
+#log4j.appender.warn.File=/logs/warn/BDXY_
+#log4j.appender.warn.DatePattern=yyyy-MM-dd-HH'.log'
+#log4j.appender.warn.layout=org.apache.log4j.PatternLayout
+#log4j.appender.warn.layout.ConversionPattern=>>LOG4J<< %r %d %p [%c] - %m%n
+#log4j.appender.warn.Threshold = WARN 
+#
+#
+#log4j.appender.error=org.apache.log4j.DailyRollingFileAppender 
+#log4j.appender.error.File=/logs/error/BDXY_
+#log4j.appender.error.DatePattern=yyyy-MM-dd-HH'.log'
+#log4j.appender.error.layout=org.apache.log4j.PatternLayout
+#log4j.appender.error.layout.ConversionPattern=>>LOG4J<< %r %d %p [%c] - %m%n
+#log4j.appender.error.Threshold = ERROR
+#
+#log4j.appender.fatal=org.apache.log4j.DailyRollingFileAppender 
+#log4j.appender.fatal.File=/logs/fatal/BDXY_
+#log4j.appender.fatal.DatePattern=yyyy-MM-dd-HH'.log'
+#log4j.appender.fatal.layout=org.apache.log4j.PatternLayout
+#log4j.appender.fatal.layout.ConversionPattern=>>LOG4J<< %r %d %p [%c] - %m%n
+#log4j.appender.fatal.Threshold = FATAL  
